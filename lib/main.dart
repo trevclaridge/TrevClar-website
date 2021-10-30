@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.purple,
       ),
-      home: const MyHomePage(title: 'Trevor Claridge'),
+      home: const MyHomePage(title: 'Grow the Box'),
     );
   }
 }
@@ -29,13 +29,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  double _counter = 0.0;
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      myHeight = _counter * 4;
+      myWidth = _counter * 4;
     });
   }
+
+  var myHeight = 0.0;
+  var myWidth = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -48,11 +53,20 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Press the button to grow the box:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            Container(
+              height: myHeight,
+              width: myWidth,
+              alignment: Alignment.bottomCenter,
+              decoration: const BoxDecoration(
+                color: Colors.red,
+                shape: BoxShape.rectangle,
+              ),
             ),
           ],
         ),
