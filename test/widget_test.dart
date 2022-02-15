@@ -11,7 +11,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:web/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Empty Test', (WidgetTester tester) async {
     return;
   });
 }
