@@ -8,9 +8,6 @@ class MyHomePage extends StatelessWidget {
     bool isScreenWide = MediaQuery.of(context).size.width >= 770;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Trevor\'s Website'),
-      ),
       body: Center(
         child: Column(
           children: [
@@ -18,7 +15,12 @@ class MyHomePage extends StatelessWidget {
             const Icon(Icons.error_outline_rounded, size: 50.0),
             const SizedBox(height: 10.0),
             Text('This site is still under construction.',
-                style: Theme.of(context).textTheme.headline2)
+                style: Theme.of(context).textTheme.titleLarge),
+            const SizedBox(height: 20.0),
+            OutlinedButton(
+              onPressed: () {},
+              child: const Text("Press Here"),
+            )
           ],
         ),
       ),
