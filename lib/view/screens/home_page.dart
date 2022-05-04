@@ -5,20 +5,33 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isScreenWide = MediaQuery.of(context).size.width >= 770;
+    // bool isScreenWide = MediaQuery.of(context).size.width >= 770;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Trevor\'s Website'),
+        title: const Text('Trevor Claridge'),
       ),
       body: Center(
-        child: Column(
-          children: [
-            const SizedBox(height: 100.0),
-            const Icon(Icons.error_outline_rounded, size: 50.0),
-            const SizedBox(height: 10.0),
-            Text('This site is still under construction.',
-                style: Theme.of(context).textTheme.headline2)
+        child: Row(
+          children: const [
+            SizedBox(width: 10.0),
+            Expanded(
+              child: PictureButton(
+                imagePath: 'assets/images/code-min_v2.jpg',
+                buttonTitle: 'Code',
+                buttonURL: 'https://github.com/trevclaridge',
+              ),
+            ),
+            SizedBox(width: 10.0),
+            Expanded(
+              child: PictureButton(
+                imagePath: 'assets/images/film-min.jpg',
+                buttonTitle: 'Film',
+                buttonURL:
+                    'https://www.youtube.com/channel/UCAyRIK-99qBiMe2dJQrZNJg',
+              ),
+            ),
+            SizedBox(width: 10.0),
           ],
         ),
       ),

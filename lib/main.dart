@@ -1,8 +1,7 @@
-import 'package:website/model/model.dart';
 import 'package:website/view/view.dart';
 import 'package:flutter/material.dart';
 
-void main() async {
+void main() {
   runApp(
     const MyApp(),
   );
